@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1775" started-at="2023-02-18T13:13:31Z" finished-at="2023-02-18T13:13:32Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="1775" started-at="2023-02-18T13:13:31Z" finished-at="2023-02-18T13:13:32Z">
+      <class name="com.demo.JsonSchemaValidation">
+        <test-method status="PASS" signature="getMethod()[pri:0, instance:com.demo.JsonSchemaValidation@59f99ea]" name="getMethod" duration-ms="1764" started-at="2023-02-18T18:43:31Z" finished-at="2023-02-18T18:43:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getMethod -->
+      </class> <!-- com.demo.JsonSchemaValidation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
