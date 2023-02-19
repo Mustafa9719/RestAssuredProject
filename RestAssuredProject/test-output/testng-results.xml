@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1775" started-at="2023-02-18T13:13:31Z" finished-at="2023-02-18T13:13:32Z">
+  <suite name="Default suite" duration-ms="5680" started-at="2023-02-19T17:45:21Z" finished-at="2023-02-19T17:45:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1775" started-at="2023-02-18T13:13:31Z" finished-at="2023-02-18T13:13:32Z">
-      <class name="com.demo.JsonSchemaValidation">
-        <test-method status="PASS" signature="getMethod()[pri:0, instance:com.demo.JsonSchemaValidation@59f99ea]" name="getMethod" duration-ms="1764" started-at="2023-02-18T18:43:31Z" finished-at="2023-02-18T18:43:32Z">
+    <test name="Default test" duration-ms="5680" started-at="2023-02-19T17:45:21Z" finished-at="2023-02-19T17:45:26Z">
+      <class name="com.demo.MyAPILocalHost3000">
+        <test-method status="PASS" signature="postMethod()[pri:1, instance:com.demo.MyAPILocalHost3000@29774679]" name="postMethod" duration-ms="3585" started-at="2023-02-19T23:15:21Z" finished-at="2023-02-19T23:15:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getMethod -->
-      </class> <!-- com.demo.JsonSchemaValidation -->
+        </test-method> <!-- postMethod -->
+        <test-method status="PASS" signature="deleteMethod()[pri:3, instance:com.demo.MyAPILocalHost3000@29774679]" name="deleteMethod" duration-ms="2083" started-at="2023-02-19T23:15:24Z" finished-at="2023-02-19T23:15:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteMethod -->
+      </class> <!-- com.demo.MyAPILocalHost3000 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -13,6 +13,8 @@ import java.util.*;
 
 public class ReqRes {
 
+	public static Response response;
+	
 	@Test(enabled=false)
 	public void sample1() {
 		Response response = get("https://reqres.in/api/users?page=2");
@@ -77,12 +79,17 @@ public class ReqRes {
 	
 	@Test(priority=2)
 	public void deleteMethod() {
+		
 		baseURI="https://reqres.in/api";
 		when()
 		.put("/users/2")
 		.then()
 		.statusCode(200)
-		.log().all();
+		.log().body()
+		.extract().response();
+//		String asString = response.asString();
+//		System.out.println(asString);
+//		Assert.assertEquals(asString.contains(""), arg1);
 	}
 
 }
