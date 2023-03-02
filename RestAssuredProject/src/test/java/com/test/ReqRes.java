@@ -1,6 +1,8 @@
 package com.test;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import static org.hamcrest.Matchers.*;
@@ -37,7 +39,35 @@ public class ReqRes {
 		.log().all();
 	}
 	
-	@Test(priority=0)
+	@Test()
+	public void getMethod1() {
+		baseURI = "https://reqres.in/api";
+		Response response = given()
+				.when()
+				.get("/users?page=2")
+		.then()
+		.statusCode(200)
+		.extract().response();
+		String asPrettyString = response.asPrettyString();
+		try {
+		JSONParser jp = new JSONParser();
+		Object parse = jp.parse(asPrettyString);
+		JSONObject obj1 = (JSONObject)parse;
+		Object object = obj1.get("data");
+		JSONArray jsarray1 = (JSONArray)object;
+		for (int i = 0; i < jsarray1.size(); i++) {
+			JSONObject jsobj = (JSONObject)jsarray1.get(i);
+			
+			String str = (String)jsobj.get("first_name");
+			System.out.println(str);
+		}
+		
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+//	@Test(priority=0)
 	public void postMethod() {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("Name", "Mohamed Mustafa");
@@ -56,7 +86,7 @@ public class ReqRes {
 		.log().all();
 	}
 	
-	@Test(priority=1)
+//	@Test(priority=1)
 	public void putMethod() {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("Name", "Mohamed Mustafa");
@@ -68,6 +98,7 @@ public class ReqRes {
 		.contentType(ContentType.JSON)
 		.accept(ContentType.JSON)
 		.body(request.toJSONString())
+		.log().all()
 		.when()
 		.put("/users/2")
 		.then()
@@ -75,7 +106,7 @@ public class ReqRes {
 		.log().all();
 	}
 	
-	@Test(priority=2)
+//	@Test(priority=2)
 	public void deleteMethod() {
 		baseURI="https://reqres.in/api";
 		when()

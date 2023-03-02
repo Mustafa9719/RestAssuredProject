@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.demo.JsonSchemaValidation">
+      <class name="com.demo.UsingDataProviderLocalHost3000">
         <methods>
-          <include name="getMethod"/>
+          <include name="deleteMethod"/>
         </methods>
-      </class> <!-- com.demo.JsonSchemaValidation -->
+      </class> <!-- com.demo.UsingDataProviderLocalHost3000 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
