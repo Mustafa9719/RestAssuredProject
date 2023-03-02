@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.TreeMap;
 
 import org.json.simple.JSONObject;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.restassured.http.ContentType;

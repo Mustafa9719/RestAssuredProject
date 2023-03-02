@@ -5,7 +5,8 @@
     <classes>
       <class name="com.demo.MyAPILocalHost3000">
         <methods>
-          <include name="putMethod"/>
+          <include name="deleteMethod"/>
+          <include name="postMethod"/>
         </methods>
       </class> <!-- com.demo.MyAPILocalHost3000 -->
     </classes>
