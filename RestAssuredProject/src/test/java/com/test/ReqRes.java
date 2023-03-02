@@ -1,5 +1,6 @@
 package com.test;
 
+import org.json.simple.JSONObject;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -100,7 +101,6 @@ public class ReqRes {
 		.contentType(ContentType.JSON)
 		.accept(ContentType.JSON)
 		.body(request.toJSONString())
-		.log().all()
 		.when()
 		.put("/users/2")
 		.then()
